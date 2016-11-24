@@ -1,0 +1,7 @@
+<%= link_to "< Cancel and go back home", cocktails_path %>
+
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name, label: "Enter the name of the cocktail", placeholder: "Mojito" %>
+
+  <%= f.submit "Make it 'n shake it!" %>
+<% end %>

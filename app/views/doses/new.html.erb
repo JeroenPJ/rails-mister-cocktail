@@ -1,0 +1,11 @@
+<%= link_to "< Cancel and go back", cocktail_path(@cocktail) %>
+
+<h2>Add an ingredient to <%= @cocktail.name %></h2>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :ingredient, label: "Enter the ingredient", placeholder: "rum" %>
+
+  <%= f.input :description, label: "Enter the amount", placeholder: "6cl" %>
+
+  <%= f.submit "Pour it in!" %>
+<% end %>
